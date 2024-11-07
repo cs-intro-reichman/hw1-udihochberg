@@ -11,7 +11,7 @@ public class FVCalc {
 			newValue = newValue + (newValue * rate / 100);
 			countYears++;
 		}
-		System.out.println("After "+years+" years, $"+(int)currentValue+" saved at "+rate+".0% will yield $"+(int)newValue); 
+		System.out.println("After "+years+" years, a $"+(int)currentValue+" saved at "+rate+".0% will yield $"+(int)newValue); 
 
 	}
 }
