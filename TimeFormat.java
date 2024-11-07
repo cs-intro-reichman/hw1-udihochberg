@@ -65,7 +65,7 @@ public class TimeFormat {
 
 		if (hours > 9 && minutes < 10) 
 		{
-			System.out.print(hours+":0"+minutes);
+			System.out.print(hours+":0"+minutes+" ");
 			if (time)
 			{
 				System.out.println("AM");
