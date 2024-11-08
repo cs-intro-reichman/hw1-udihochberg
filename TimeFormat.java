@@ -14,11 +14,9 @@ public class TimeFormat {
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
         // Replace this comment with the rest of your code		
 		// tring ampm = "PM";
-		int hoursFixed = hours;
-		if (hours <= 13)
+		if (hours >= 13)
 		{
-			hoursFixed = hoursFixed % 12;
-			System.out.print(hoursFixed+ ":");
+			System.out.print(hours - 12 + ":");
 		}
 		else
 		{
