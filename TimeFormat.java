@@ -12,68 +12,39 @@ public class TimeFormat {
 		int hours = Integer.parseInt("" + args[0].charAt(0) + args[0].charAt(1));
 		// Does the same with the minutes part of the input.
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
-        // Replace this comment with the rest of your code
-		boolean time = true;
-		if (hours > 12)
+        // Replace this comment with the rest of your code		
+		// tring ampm = "PM";
+		int hoursFixed = hours;
+		if (hours <= 13)
 		{
-			hours = hours - 12;
-			time = false; // false = pm, true = am
+			hoursFixed = hoursFixed % 12;
+			System.out.print(hoursFixed+ ":");
 		}
-		if(hours == 12)
+		else
 		{
-			time = false;
+			System.out.print(hours+ ":");
 		}
-
-		if (hours < 10 && minutes < 10) 
+		if(minutes < 10)
 		{
-			System.out.print("0"+hours+":"+minutes+"0 ");
-			if (time)
-			{
-				System.out.println("AM");
-			}
-			else
-			{
-				System.out.println("PM");
-			}
+			System.out.print("0" + minutes);
 		}
-
-		if (hours < 10 && minutes > 9) 
+		else
 		{
-			System.out.print("0"+hours+":"+minutes+" ");
-			if (time)
-			{
-				System.out.println("AM");
-			}
-			else
-			{
-				System.out.println("PM");
-			}
+			System.out.print(minutes);
+		}
+		if (hours < 12)
+		{
+			System.out.print(" AM");
+		}
+		else 
+		{
+			System.out.print(" PM");
 		}
 
-		if (hours > 9 && minutes > 9) 
-		{
-			System.out.print(hours+":"+minutes+" ");
-			if (time)
-			{
-				System.out.println("AM");
-			}
-			else
-			{
-				System.out.println("PM");
-			}
-		}
 
-		if (hours > 9 && minutes < 10) 
-		{
-			System.out.print(hours+":0"+minutes+" ");
-			if (time)
-			{
-				System.out.println("AM");
-			}
-			else
-			{
-				System.out.println("PM");
-			}
-		}		
+		
+		
+
+		
 		}
 	}
